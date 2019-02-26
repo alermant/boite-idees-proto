@@ -8,6 +8,8 @@
 npm run start:dev
 ```
 
+- Api doc [http://localhost:3000/apidoc/](http://localhost:3000/apidoc/)
+
 - Testing
 ```
 npm test
