@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { SentimentController } from './sentiment.controller';
+import { SentimentService } from './sentiment.service';
 
 describe('Sentiment Controller', () => {
   let module: TestingModule;
@@ -7,6 +8,7 @@ describe('Sentiment Controller', () => {
   beforeAll(async () => {
     module = await Test.createTestingModule({
       controllers: [SentimentController],
+      providers: [SentimentService],
     }).compile();
   });
   it('should be defined', () => {
