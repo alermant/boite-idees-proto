@@ -9,3 +9,7 @@ script:
 
 after_script:
     - npm test
+
+cache:
+    directories:
+        - node_modules
