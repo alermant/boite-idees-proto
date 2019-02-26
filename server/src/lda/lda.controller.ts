@@ -8,7 +8,7 @@ export class LdaController {
   constructor(private readonly ldaService: LdaService) {}
 
   @Post()
-  @ApiOkResponse({description: 'LDA Topic modeling result'})
+  @ApiResponse({status: 201, description: 'LDA Topic modeling result'})
   getTopic(@Body() ldaTopicDto: LdaTopicDto) {
     return this.ldaService.getTopic(
       ldaTopicDto.documents,

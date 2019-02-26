@@ -18,7 +18,9 @@ npm test
 ### Client
 
 - Running
-TODO
+```
+npm run serve
+```
 
 - Testing
 ```
