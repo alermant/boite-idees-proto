@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vs-table max-items="3" pagination :data="ideas">
+    <vs-table pagination :data="ideas">
       <template slot="header">
         <h3>
           Ideas
