@@ -46,7 +46,7 @@ export default {
       },
       topics: [],
       numberOfWords: 10,
-      numberOfTopics: 3,
+      numberOfTopics: 4,
     }
   },
   methods: {
