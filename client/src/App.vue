@@ -3,8 +3,8 @@
     <div id="nav">
       <div class="logo"></div>
       <div class="block-link">
-        <router-link to="/">Home</router-link>
-        <router-link to="/ideas-analysis">Ideas analysis</router-link>
+        <router-link to="/">Accueil</router-link>
+        <router-link to="/ideas-analysis">Mes idées</router-link>
         <router-link to="/contact">Contact</router-link>
       </div>
     </div>
