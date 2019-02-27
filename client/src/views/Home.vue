@@ -45,4 +45,58 @@ export default class Home extends Vue {}
   font-size: 30px;
   margin-top: 25px;
 }
+
+.home .block-avis {
+  width: 100%;
+}
+.home .block-avis .avis {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+.home .block-avis .avis.grey {
+  background-color: #f4f4f4;
+}
+.home .block-avis .avis .picture {
+  width: 300px;
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 90px;
+}
+.home .block-avis .avis .block-text {
+  text-align: left;
+  width: 660px;
+}
+.home .block-avis .avis .block-text .soavis {
+  font-size: 2.4rem;
+}
+.home .block-avis .avis .block-text .auteur {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: rgb(102, 102, 102);
+}
+.home .block-avis .avis .block-text .poste {
+  display: block;
+  font-size: 1.52rem;
+  color: rgb(102, 102, 102);
+}
+.home .block-avis .avis.one .picture {
+  background-image: url("../assets/personne1.png");
+}
+.home .block-avis .avis.two .picture {
+  background-image: url("../assets/personne2.png");
+}
+.home .block-avis .avis.two .picture {
+  background-image: url("../assets/personne2.png");
+  margin-right: 0px;
+  margin-left: 90px;
+}
+.home .block-avis .avis.three .picture {
+  background-image: url("../assets/personne3.png");
+}
 </style>

@@ -9,6 +9,7 @@
       </div>
     </div>
     <router-view/>
+    <div id="footer">© 2019 Bai</div>
   </div>
 </template>
 
@@ -68,5 +69,8 @@
 #nav .block-link a.router-link-exact-active::after {
   background-color: #0f92dd;
   transform: scaleX(1);
+}
+#footer {
+  padding: 15px;
 }
 </style>
