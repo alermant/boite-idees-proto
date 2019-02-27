@@ -1,20 +1,21 @@
 <template>
   <div>
-    <vs-row style="margin-top: 5%;">
-      <vs-col class='wordcloud' vs-type="flex" vs-justify="center" vs-align="center" vs-w="6">
-        <vue-word-cloud :words="wordCloudData">
-          <template slot-scope="{text, weight}">
-            <div :title="weight" style="cursor: pointer;">
-              {{ text }}
-            </div>
-          </template>
-        </vue-word-cloud>
-      </vs-col>
-      <vs-col class='sentiments' vs-type="flex" vs-justify="right" vs-align="right" vs-w="6">
-        <p>Sentiment analysis:</p>
-        <IdeasComponent :ideas="ideas"></IdeasComponent>
-      </vs-col>
-    </vs-row>
+    <div style="float: left;width: 400px; height: 400px;text-align: center;">
+      <vue-word-cloud :words="wordCloudData">
+        <template slot-scope="{text, weight}">
+          <div :title="weight" style="cursor: pointer;">
+            {{ text }}
+          </div>
+        </template>
+      </vue-word-cloud>
+    </div>
+    <div style="float: right;width: calc(100% - 400px);height: 400px;text-align: center;">
+      <p>Sentiment analysis:</p>
+      <i v-if="sentiments[0].score > 0" class="far fa-smile"></i>
+      <i v-else-if="sentiments[0].score < 0" class="far fa-frown"></i>
+      <i v-else class="far fa-meh"></i>
+      <IdeasComponent :ideas="ideas"></IdeasComponent>
+    </div>
     <div style="clear: both;"></div>
   </div>
 
