@@ -19,7 +19,7 @@
       <button @click='generateTopics'>Generate topics</button>
     </div>
     <div>
-      <TopicItemComponent :key='key' v-for='(words, key) in topics' :words='words'></TopicItemComponent>
+      <TopicItemComponent :key='key' v-for='(topic, key) in topics' :words='topic.words' :ideas='topic.ideas'></TopicItemComponent>
     </div>
   </div>
 </template>

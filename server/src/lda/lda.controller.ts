@@ -10,10 +10,24 @@ export class LdaController {
   @Post()
   @ApiResponse({status: 201, description: 'LDA Topic modeling result'})
   getTopic(@Body() ldaTopicDto: LdaTopicDto) {
-    return this.ldaService.getTopic(
+    const data = this.ldaService.getTopic(
       ldaTopicDto.documents,
       ldaTopicDto.topics,
       ldaTopicDto.words,
     );
+    const response = []
+    let ideas = []
+    for(const topic of data) {
+      for(const word of topic) {
+        for(const idea of ldaTopicDto.documents){
+          if (idea.includes(word.term)){
+            ideas.push(idea)
+          }
+        }
+      }
+      response.push({words: topic, ideas: ideas})
+      ideas = []
+    }
+    return response
   }
 }

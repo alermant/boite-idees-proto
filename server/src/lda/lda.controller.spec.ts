@@ -27,7 +27,7 @@ describe('Lda Controller', () => {
     } as LdaTopicDto;
 
     expect(controller.getTopic(ldaTopicDto)).toEqual([
-      [{ probability: 1, term: 'phrase' }],
+      [{ probability: 1, term: 'phrase' }, ideas: ['phrase 1', 'phrase 2', 'phrase 3']],
     ]);
   });
 });
