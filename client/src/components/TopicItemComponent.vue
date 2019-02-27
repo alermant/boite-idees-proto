@@ -11,9 +11,11 @@
     </div>
     <div style="float: right;width: calc(100% - 400px);height: 400px;text-align: center;">
       <p>Sentiment analysis:</p>
-      <i v-if="sentiments[0].score > 0" class="far fa-smile"></i>
-      <i v-else-if="sentiments[0].score < 0" class="far fa-frown"></i>
-      <i v-else class="far fa-meh"></i>
+      <div v-if="sentiments[0]">
+        <i v-if="sentiments[0].score > 0" class="far fa-smile"></i>
+        <i v-else-if="sentiments[0].score < 0" class="far fa-frown"></i>
+        <i v-else class="far fa-meh"></i>
+      </div>
       <IdeasComponent :ideas="ideas"></IdeasComponent>
     </div>
     <div style="clear: both;"></div>
