@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/ideas-analysis">Ideas analysis</router-link>
